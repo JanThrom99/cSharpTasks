@@ -67,6 +67,13 @@ namespace CSharpTasks
             //var newString = uString.PadRight(30, 'y');
             //Console.WriteLine(newString);
             //Console.ReadKey();
+
+            //task 7
+            Console.WriteLine("gib einen Text mit Leerzeichen am Anfang und am Ende ein");
+            var uString = Console.ReadLine();
+            var newString = uString.Trim();
+            Console.WriteLine(":"+newString+":");
+            Console.ReadKey();
         }
     }
 }

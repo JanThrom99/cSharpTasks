@@ -76,13 +76,26 @@ namespace CSharpTasks
             //Console.ReadKey();
 
             //task 8
-            Console.WriteLine("gib einen Text mit Semikolons darin ein");
+            //Console.WriteLine("gib einen Text mit Semikolons darin ein");
+            //var uString = Console.ReadLine();
+            //var splittedStrings = uString.Split(';');
+            //Console.WriteLine("deine substrings sind: ");
+            //foreach (var split in splittedStrings)
+            //{
+            //    Console.WriteLine(split);
+            //}
+            //Console.ReadKey();
+
+            //task 9 
+            Console.WriteLine("gib einen Text ein");
             var uString = Console.ReadLine();
-            var splittedStrings = uString.Split(';');
-            Console.WriteLine("deine substrings sind: ");
-            foreach (var split in splittedStrings)
+            if (uString.Contains("abc"))
             {
-                Console.WriteLine(split);
+                Console.WriteLine("true");
+            }
+            else
+            {
+                Console.WriteLine("false");
             }
             Console.ReadKey();
         }

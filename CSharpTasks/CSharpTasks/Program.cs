@@ -43,6 +43,16 @@ namespace CSharpTasks
             Console.WriteLine("Länge mit Leerzeichen: " + lengthWithSpaces);
             Console.WriteLine("Länge ohne Leerzeichen: " + lengthWithoutSpaces);
             Console.ReadKey();
+
+            //task 2b
+            Console.WriteLine("welche beiden Fließkomma Zahlen willst du addieren?");
+            Console.WriteLine("zahl 1: ");
+            var number11 = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("zahl 2: ");
+            var number22 = Convert.ToDouble(Console.ReadLine());
+            var addedDoubles = number11 + number22;
+            Console.WriteLine("Die Summe ist: " + addedDoubles);
+            Console.ReadKey();
         }
     }
 }

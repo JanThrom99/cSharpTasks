@@ -55,11 +55,18 @@ namespace CSharpTasks
             //Console.ReadKey();
 
             //task 5
-            Console.WriteLine("gib einen Text ein");
-            var uString = Console.ReadLine();
-            var newString = uString.PadLeft(20,'y');
-            Console.WriteLine(newString);
-            Console.ReadKey();
+            //Console.WriteLine("gib einen Text ein");
+            //var uString = Console.ReadLine();
+            //var newString = uString.PadLeft(20,'y');
+            //Console.WriteLine(newString);
+            //Console.ReadKey();
+
+            //task 6
+            //Console.WriteLine("gib einen Text ein");
+            //var uString = Console.ReadLine();
+            //var newString = uString.PadRight(30, 'y');
+            //Console.WriteLine(newString);
+            //Console.ReadKey();
         }
     }
 }

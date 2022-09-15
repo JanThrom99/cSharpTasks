@@ -69,10 +69,21 @@ namespace CSharpTasks
             //Console.ReadKey();
 
             //task 7
-            Console.WriteLine("gib einen Text mit Leerzeichen am Anfang und am Ende ein");
+            //Console.WriteLine("gib einen Text mit Leerzeichen am Anfang und am Ende ein");
+            //var uString = Console.ReadLine();
+            //var newString = uString.Trim();
+            //Console.WriteLine(":" + newString + ":");
+            //Console.ReadKey();
+
+            //task 8
+            Console.WriteLine("gib einen Text mit Semikolons darin ein");
             var uString = Console.ReadLine();
-            var newString = uString.Trim();
-            Console.WriteLine(":"+newString+":");
+            var splittedStrings = uString.Split(';');
+            Console.WriteLine("deine substrings sind: ");
+            foreach (var split in splittedStrings)
+            {
+                Console.WriteLine(split);
+            }
             Console.ReadKey();
         }
     }

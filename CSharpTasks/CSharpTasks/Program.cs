@@ -24,8 +24,10 @@ namespace CSharpTasks
             int number1 = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("zahl 2: ");
             int number2 = Convert.ToInt32(Console.ReadLine());
-            int sum = number1 + number2;
-            Console.WriteLine("Die Summe ist: "+ sum);
+            int addedNumbers = number1 + number2;
+            Console.WriteLine("Die Summe ist: "+ addedNumbers);
+
+
         }
     }
 }

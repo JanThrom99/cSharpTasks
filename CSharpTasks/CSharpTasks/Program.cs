@@ -28,14 +28,21 @@ namespace CSharpTasks
             Console.WriteLine("Die Summe ist: "+ addedNumbers);
             Console.ReadKey();
 
-            // task 3 
+            //task 3 
             Console.WriteLine("gib einen Text ein und ich ersetze alle U's durch G's");
             var userString = Console.ReadLine();
             var replacedUserString = userString.Replace("U", "G").Replace("u", "g");
             Console.WriteLine(replacedUserString);
             Console.ReadKey();
 
-
+            //task 4
+            Console.WriteLine("gib einen Text ein und ich sage dir wie lang er ist");
+            var uString = Console.ReadLine();
+            var lengthWithSpaces = uString.Length;
+            var lengthWithoutSpaces = uString.Replace(" ", "").Length;
+            Console.WriteLine("Länge mit Leerzeichen: " + lengthWithSpaces);
+            Console.WriteLine("Länge ohne Leerzeichen: " + lengthWithoutSpaces);
+            Console.ReadKey();
         }
     }
 }

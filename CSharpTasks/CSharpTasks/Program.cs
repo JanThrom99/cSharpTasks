@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -100,11 +101,130 @@ namespace CSharpTasks
             //Console.ReadKey();
 
             //task 10
-            Console.WriteLine("gib einen Text ein");
-            var uString = Console.ReadLine();
-            Console.WriteLine(uString.ToUpper());
-            Console.WriteLine(uString.ToLower());
-            Console.ReadKey();
+            //Console.WriteLine("gib einen Text ein");
+            //var uString = Console.ReadLine();
+            //Console.WriteLine(uString.ToUpper());
+            //Console.WriteLine(uString.ToLower());
+            //Console.ReadKey();
+
+
+            //FOR SCHLEIFE TASKS 
+            //task 1
+            //var wert1 = 0;
+
+            //Console.WriteLine("bitte gib eine Zahl ein");
+            //var userInput = Convert.ToInt32(Console.ReadLine());
+            //for (int i = 0; i < userInput; i++)
+            //{
+            //    wert1 = wert1 + i;
+            //    Console.WriteLine(wert1);
+            //}
+
+            //Console.ReadKey();
+
+            //task 2
+            //Console.WriteLine("bitte gib eine Zahl ein");
+            //var userInput = Convert.ToInt32(Console.ReadLine());
+            //for (int i = userInput; i >=0; i--)
+            //{
+            //    Console.WriteLine(i);
+            //}
+            //Console.ReadKey();
+
+            //task 3 
+            //Console.WriteLine("Bitte gib einen Buchstaben ein");
+            //var userChar = Console.ReadLine();
+            //var namen = new string[] {"Jonas","Philipp","Niklas","Marcello","Andreas","Robin","Robert","Marie","Leon","Erwin","Jan","Mona","Lukas","Johannes"};
+
+            //foreach (var name in namen)
+            //{
+            //    if (name.Contains(userChar))
+            //    {
+            //        Console.WriteLine(name);
+            //    }
+            //}
+
+            //Console.ReadKey();
+
+            //task 4
+            //Console.WriteLine("wie groß soll das array sein?");
+            //var userInput = Convert.ToInt32(Console.ReadLine());
+            //var userInput2 = 0;
+            //var array = new int[userInput];
+            //for (int i = 0; i < array.Length; i++)
+            //{
+            //    Console.WriteLine("welche Zahl soll ins Array?");
+            //    userInput2= Convert.ToInt32(Console.ReadLine());
+            //    array[i] = userInput2;
+            //}
+
+            //foreach (var item in array)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            //Console.ReadKey();
+
+            //task 4b
+            //Console.WriteLine("wie groß soll das array sein?");
+            //var userInput = Convert.ToInt32(Console.ReadLine());
+            //var userInput2 = 0;
+            //var array = new int[userInput];
+            //for (int i = 0; i < array.Length; i++)
+            //{
+            //    Console.WriteLine("welche Zahl soll ins Array?");
+            //    userInput2 = Convert.ToInt32(Console.ReadLine());
+            //    array[i] = userInput2;
+            //}
+
+            //foreach (var item in array)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            //Console.WriteLine("max: "+array.Max());
+            //Console.WriteLine("min: " + array.Min());
+            //Console.WriteLine("average: " + array.Average());
+            //Console.ReadKey();
+
+            //task 5 
+            //for (int i = 1; i <= 100; i++)
+            //{
+            //    if (i % 3 == 0 && i % 5 == 0)
+            //    {
+            //        Console.WriteLine(i + " FizzBuzz");
+            //    }
+            //    else
+            //    {
+            //        if (i%5 == 0)
+            //        {
+            //            Console.WriteLine(i + " Buzz");
+            //        }
+
+            //        if (i%3 == 0)
+            //        {
+            //            Console.WriteLine(i + " Fizz");
+            //        }
+
+            //        Console.WriteLine(i);
+            //    }
+
+            //}
+            //Console.ReadKey();
+
+
+            //TAG 3
+            //Einstiegsaufgabe
+            //Console.WriteLine("Gib eine Zeichenfolge ein");
+            //var zeichenfolge = Console.ReadLine();
+            //Console.WriteLine("Gib an wo der substring starten soll");
+            //var subStringStart = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine("Gib an wie lange der substring sein soll");
+            //var subStringlaenge = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine(zeichenfolge.Substring(subStringStart,subStringlaenge));
+            //Console.ReadKey();
+
+
         }
     }
 }

@@ -224,6 +224,47 @@ namespace CSharpTasks
             //Console.WriteLine(zeichenfolge.Substring(subStringStart,subStringlaenge));
             //Console.ReadKey();
 
+            //NAMEN AUFGABE 
+            //Console.WriteLine("wie heisst du? ");
+            //var userInput = Console.ReadLine();
+            //if (userInput.Trim().Length == 0)
+            //{
+            //    Console.WriteLine("Gib deinen Namen ein!!! \n _______/]_________[\\______ \n|    ____     ___|-----------|===== \n|_ /      /  /_| | \n         /_/   \\_\\");
+            //    userInput = Console.ReadLine();
+            //}
+
+            //var counter = 0;
+            //var newArray = userInput.ToCharArray();
+            //foreach (var character in newArray)
+            //{
+            //    Console.WriteLine(character);
+            //    if (character.ToString().Contains('a'))
+            //    {
+            //        counter++; 
+
+            //    }
+            //}
+
+            //Console.WriteLine("Der Buchstabe a kommt "+counter+" Mal vor");
+
+            //Console.WriteLine("gib nochmal zwei zahlen ein");
+            //Console.WriteLine("zahl1: ");
+            //var zahl1 = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine("zahl2: ");
+            //var zahl2 = Convert.ToInt32(Console.ReadLine());
+            //if (zahl1 > zahl2)
+            //{
+            //    Console.WriteLine("Zahl1 ist größer");
+            //}
+            //else if (zahl1 == zahl2)
+            //{
+            //    Console.WriteLine("Die Zahlen sind gleich groß");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Zahl2 ist größer");
+            //}
+            //Console.ReadKey();
 
         }
     }

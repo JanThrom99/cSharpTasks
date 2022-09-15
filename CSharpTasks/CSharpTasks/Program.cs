@@ -269,11 +269,36 @@ namespace CSharpTasks
 
 
             //ZEITAUFGABE
-            Console.WriteLine("Gib die Anzahl der Sekunden an");
-            var sekunden = Convert.ToDouble(Console.ReadLine());
-            var timeSpan = TimeSpan.FromSeconds(sekunden);
-            string timeString = string.Format("{0:D2}d:{1:D2}h:{2:D2}m:{3:D2}s",timeSpan.Days,timeSpan.Hours,timeSpan.Minutes,timeSpan.Seconds);
-            Console.WriteLine(timeString);
+            //Console.WriteLine("Gib die Anzahl der Sekunden an");
+            //var sekunden = Convert.ToDouble(Console.ReadLine());
+            //var timeSpan = TimeSpan.FromSeconds(sekunden);
+            //string timeString = string.Format("{0:D2}d:{1:D2}h:{2:D2}m:{3:D2}s",timeSpan.Days,timeSpan.Hours,timeSpan.Minutes,timeSpan.Seconds);
+            //Console.WriteLine(timeString);
+            //Console.ReadKey();
+
+
+            //BUCHSTABENANZAHL
+            IDictionary<char, int> dictionary = new Dictionary<char, int>();
+            Console.WriteLine("bitte gib eine wort ein");
+            var input = Console.ReadLine();
+
+            foreach (var c in input)
+            {
+                if (dictionary.ContainsKey(c))
+                {
+                    dictionary[c] = dictionary[c] + 1;
+                }
+                else
+                {
+                    dictionary.Add(c,1);
+                }
+            }
+
+            foreach (var item in dictionary)
+            {
+                Console.WriteLine(item.Key + " kommt " + item.Value + " mal vor");
+            }
+
             Console.ReadKey();
         }
     }

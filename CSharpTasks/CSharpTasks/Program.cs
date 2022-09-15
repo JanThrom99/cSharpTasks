@@ -87,16 +87,23 @@ namespace CSharpTasks
             //Console.ReadKey();
 
             //task 9 
+            //Console.WriteLine("gib einen Text ein");
+            //var uString = Console.ReadLine();
+            //if (uString.Contains("abc"))
+            //{
+            //    Console.WriteLine("true");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("false");
+            //}
+            //Console.ReadKey();
+
+            //task 10
             Console.WriteLine("gib einen Text ein");
             var uString = Console.ReadLine();
-            if (uString.Contains("abc"))
-            {
-                Console.WriteLine("true");
-            }
-            else
-            {
-                Console.WriteLine("false");
-            }
+            Console.WriteLine(uString.ToUpper());
+            Console.WriteLine(uString.ToLower());
             Console.ReadKey();
         }
     }

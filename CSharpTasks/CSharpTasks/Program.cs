@@ -311,7 +311,7 @@ namespace CSharpTasks
             //{
             //    Console.WriteLine($"gib eine zahl für die Array Stelle {i} ein");
             //    userArray[i] = Convert.ToDecimal(Console.ReadLine());
-              
+
             //}
 
             //Console.WriteLine("addition per for schleife");
@@ -376,8 +376,26 @@ namespace CSharpTasks
             //}
             //Console.ReadKey();
 
-            //Palindrom task 
+            //list filled by user
+            List<string> nameList = new List<string>();
+            var repeat = true; 
+            do
+            {
+                Console.WriteLine("Bitte gib einen Namen ein ");
+                nameList.Add(Console.ReadLine());
+                Console.WriteLine("Willst du noch einen Namen eingeben? (y/n)");
+                var userInput = Console.ReadLine();
+                if (userInput == "n")
+                {
+                    repeat = false;
+                }
+            } while (repeat);
 
+            foreach (var name in nameList)
+            {
+                Console.WriteLine(name);
+            }
+            Console.ReadKey();
         }
     }
 }

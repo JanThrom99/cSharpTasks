@@ -303,44 +303,80 @@ namespace CSharpTasks
 
 
             //TAG 4
+            //Console.WriteLine("Wie viele Einträge willst du haben?");
+            //var arrayLength= Convert.ToInt32(Console.ReadLine());
+            //decimal[] userArray = new decimal[arrayLength];
 
-            Console.WriteLine("Wie viele Einträge willst du haben?");
-            var arrayLength= Convert.ToInt32(Console.ReadLine());
-            decimal[] userArray = new decimal[arrayLength];
-
-            for (int i = 0; i < userArray.Length; i++)
-            {
-                Console.WriteLine($"gib eine zahl für die Array Stelle {i} ein");
-                userArray[i] = Convert.ToDecimal(Console.ReadLine());
+            //for (int i = 0; i < userArray.Length; i++)
+            //{
+            //    Console.WriteLine($"gib eine zahl für die Array Stelle {i} ein");
+            //    userArray[i] = Convert.ToDecimal(Console.ReadLine());
               
-            }
+            //}
 
-            Console.WriteLine("addition per for schleife");
-            decimal forResult = 0;
-            for (int i = 0; i < userArray.Length; i++)
-            {
-                forResult = forResult + userArray[i];
-            }
-            Console.WriteLine(forResult);
+            //Console.WriteLine("addition per for schleife");
+            //decimal forResult = 0;
+            //for (int i = 0; i < userArray.Length; i++)
+            //{
+            //    forResult = forResult + userArray[i];
+            //}
+            //Console.WriteLine(forResult);
 
-            Console.WriteLine("addition per foreach schleife");
-            decimal foreachResult = 0;
-            foreach (var number in userArray)
-            {
-                foreachResult = foreachResult + number;
-            }
-            Console.WriteLine(foreachResult);
+            //Console.WriteLine("addition per foreach schleife");
+            //decimal foreachResult = 0;
+            //foreach (var number in userArray)
+            //{
+            //    foreachResult = foreachResult + number;
+            //}
+            //Console.WriteLine(foreachResult);
 
-            Console.WriteLine("addition per while schleife");
-            decimal whileResult = 0;
-            int counter = 0;
-            while (counter < userArray.Length)
-            {
-                whileResult = whileResult + userArray[counter];
-                counter++;
-            }
-            Console.WriteLine(whileResult);
-            Console.ReadKey();
+            //Console.WriteLine("addition per while schleife");
+            //decimal whileResult = 0;
+            //int counter = 0;
+            //while (counter < userArray.Length)
+            //{
+            //    whileResult = whileResult + userArray[counter];
+            //    counter++;
+            //}
+            //Console.WriteLine(whileResult);
+            //Console.ReadKey();
+
+            //switch case intro
+            //Console.WriteLine("Bitte gib die erste von zwei Zahlen ein");
+            //var firstNumber = Convert.ToDouble(Console.ReadLine());
+
+            //Console.WriteLine("Bitte gib die zweite Zahl ein");
+            //var secondNumber = Convert.ToDouble(Console.ReadLine());
+
+            //Console.WriteLine("Bitte gib den Rechenoperator ein (+,-,/,*,%)");
+            //var operatorValue = Console.ReadLine();
+            //double result = 0;
+            //switch (operatorValue)
+            //{
+            //    case "/":
+            //        result = firstNumber / secondNumber;
+            //        Console.WriteLine("Divisionsergebnis: "+ result);
+            //        break;
+            //    case "+":
+            //        result = firstNumber + secondNumber;
+            //        Console.WriteLine("Additionsergebnis: " + result);
+            //        break;
+            //    case "-":
+            //        result = firstNumber - secondNumber;
+            //        Console.WriteLine("Subtraktionsergebnis: " + result);
+            //        break;
+            //    case "*":
+            //        result = firstNumber * secondNumber;
+            //        Console.WriteLine("Multiplikationsergebnis: " + result);
+            //        break;
+            //    case "%":
+            //        result = firstNumber % secondNumber;
+            //        Console.WriteLine("Modulo Ergebnis: " + result);
+            //        break;
+            //}
+            //Console.ReadKey();
+
+            //Palindrom task 
 
         }
     }

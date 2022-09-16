@@ -278,28 +278,70 @@ namespace CSharpTasks
 
 
             //BUCHSTABENANZAHL
-            IDictionary<char, int> dictionary = new Dictionary<char, int>();
-            Console.WriteLine("bitte gib eine wort ein");
-            var input = Console.ReadLine();
+            //IDictionary<char, int> dictionary = new Dictionary<char, int>();
+            //Console.WriteLine("bitte gib eine wort ein");
+            //var input = Console.ReadLine();
 
-            foreach (var c in input)
+            //foreach (var c in input)
+            //{
+            //    if (dictionary.ContainsKey(c))
+            //    {
+            //        dictionary[c] = dictionary[c] + 1;
+            //    }
+            //    else
+            //    {
+            //        dictionary.Add(c,1);
+            //    }
+            //}
+
+            //foreach (var item in dictionary)
+            //{
+            //    Console.WriteLine(item.Key + " kommt " + item.Value + " mal vor");
+            //}
+
+            //Console.ReadKey();
+
+
+            //TAG 4
+
+            Console.WriteLine("Wie viele Einträge willst du haben?");
+            var arrayLength= Convert.ToInt32(Console.ReadLine());
+            decimal[] userArray = new decimal[arrayLength];
+
+            for (int i = 0; i < userArray.Length; i++)
             {
-                if (dictionary.ContainsKey(c))
-                {
-                    dictionary[c] = dictionary[c] + 1;
-                }
-                else
-                {
-                    dictionary.Add(c,1);
-                }
+                Console.WriteLine($"gib eine zahl für die Array Stelle {i} ein");
+                userArray[i] = Convert.ToDecimal(Console.ReadLine());
+              
             }
 
-            foreach (var item in dictionary)
+            Console.WriteLine("addition per for schleife");
+            decimal forResult = 0;
+            for (int i = 0; i < userArray.Length; i++)
             {
-                Console.WriteLine(item.Key + " kommt " + item.Value + " mal vor");
+                forResult = forResult + userArray[i];
             }
+            Console.WriteLine(forResult);
 
+            Console.WriteLine("addition per foreach schleife");
+            decimal foreachResult = 0;
+            foreach (var number in userArray)
+            {
+                foreachResult = foreachResult + number;
+            }
+            Console.WriteLine(foreachResult);
+
+            Console.WriteLine("addition per while schleife");
+            decimal whileResult = 0;
+            int counter = 0;
+            while (counter < userArray.Length)
+            {
+                whileResult = whileResult + userArray[counter];
+                counter++;
+            }
+            Console.WriteLine(whileResult);
             Console.ReadKey();
+
         }
     }
 }

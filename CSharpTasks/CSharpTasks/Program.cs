@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlTypes;
 using System.Linq;
 using System.Net.Http.Headers;
 using System.Text;
@@ -377,25 +378,59 @@ namespace CSharpTasks
             //Console.ReadKey();
 
             //list filled by user
-            List<string> nameList = new List<string>();
-            var repeat = true; 
-            do
-            {
-                Console.WriteLine("Bitte gib einen Namen ein ");
-                nameList.Add(Console.ReadLine());
-                Console.WriteLine("Willst du noch einen Namen eingeben? (y/n)");
-                var userInput = Console.ReadLine();
-                if (userInput == "n")
-                {
-                    repeat = false;
-                }
-            } while (repeat);
+            //List<string> nameList = new List<string>();
+            //var repeat = true; 
+            //do
+            //{
+            //    Console.WriteLine("Bitte gib einen Namen ein ");
+            //    nameList.Add(Console.ReadLine());
+            //    Console.WriteLine("Willst du noch einen Namen eingeben? (y/n)");
+            //    var userInput = Console.ReadLine();
+            //    if (userInput == "n")
+            //    {
+            //        repeat = false;
+            //    }
+            //} while (repeat);
 
-            foreach (var name in nameList)
-            {
-                Console.WriteLine(name);
-            }
+            //foreach (var name in nameList)
+            //{
+            //    Console.WriteLine(name);
+            //}
+            //Console.ReadKey();
+
+
+
+
+            //Console.WriteLine("wir holen uns die namen");
+            //List<string> stringList = Program.Sentence();
+            //foreach (var unit in stringList)
+            //{
+            //    Console.WriteLine(unit);
+            //}
+            //Console.ReadKey();
+
+
+
+
+
+            int zahl1 = 35;
+            int zahl2 = 25;
+            Console.WriteLine(Add(zahl1, zahl2));
             Console.ReadKey();
+        }
+
+        static int Add(int z1, int z2)
+        {
+            int summe = z1 + z2;
+            return summe;
+        }
+
+        static List<string> Sentence()
+        {
+            List<string> names = new List<string>();
+            names.Add("foo");
+            names.Add("bar");
+            return names;
         }
     }
 }

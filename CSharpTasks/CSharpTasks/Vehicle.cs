@@ -47,6 +47,7 @@ namespace CSharpTasks
             {
                 Geschwindigkeit -= 10;
                 Console.WriteLine($"{this.GetType().Name} wird gebremst auf {Geschwindigkeit} Km/h");
+
             }
         }
     }

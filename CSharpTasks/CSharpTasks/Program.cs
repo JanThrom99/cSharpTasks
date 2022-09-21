@@ -47,40 +47,73 @@ namespace CSharpTasks
             }
             */
 
-            var dog1 = new Dog("Bello",3,80,12,45,true);
-            var cat1 = new Cat("Swiffers",5,24,15,13,true);
-            var pig1 = new Dog("Würstchen", 10, 65, 4, 100, false);
+            //var dog1 = new Dog("Bello",3,80,12,45,true);
+            //var cat1 = new Cat("Swiffers",5,24,15,13,true);
+            //var pig1 = new Dog("Würstchen", 10, 65, 4, 100, false);
 
-            var gehege1 = new Gehege("Hundegehege",1,"Hund", dog1);
-            var gehege2 = new Gehege("Katzengehebe", 2, "Katze", cat1);
-            var gehege3 = new Gehege("Schweinegehege", 1, "Schwein", pig1);
+            //var gehege1 = new Gehege("Hundegehege",1,"Hund", dog1);
+            //var gehege2 = new Gehege("Katzengehebe", 2, "Katze", cat1);
+            //var gehege3 = new Gehege("Schweinegehege", 1, "Schwein", pig1);
 
-            var zoo = new Zoo("Der Neue Zoo");
+            //var zoo = new Zoo("Der Neue Zoo");
 
-            zoo.AddGehege(gehege1);
-            zoo.AddGehege(gehege2);
-            zoo.AddGehege(gehege3);
+            //zoo.AddGehege(gehege1);
+            //zoo.AddGehege(gehege2);
+            //zoo.AddGehege(gehege3);
 
-            zoo.PrintZooInfo();
+            //zoo.PrintZooInfo();
 
-            dog1.GeraeuscheMachen();
-            cat1.GeraeuscheMachen();
-            pig1.GeraeuscheMachen();
+            //dog1.GeraeuscheMachen();
+            //cat1.GeraeuscheMachen();
+            //pig1.GeraeuscheMachen();
 
-            dog1.Essen();
-            cat1.Essen();
-            pig1.Essen();
+            //dog1.Essen();
+            //cat1.Essen();
+            //pig1.Essen();
 
-            dog1.Trinken();
-            cat1.Trinken();
-            pig1.Trinken();
+            //dog1.Trinken();
+            //cat1.Trinken();
+            //pig1.Trinken();
 
 
-            dog1.PrintAnimalInfo();
-            cat1.PrintAnimalInfo();
-            pig1.PrintAnimalInfo();
+            //dog1.PrintAnimalInfo();
+            //cat1.PrintAnimalInfo();
+            //pig1.PrintAnimalInfo();
+
+            var azubis = createAzubiList(5);
+            var cleanedUpList = CleanList(azubis);
+            foreach (var entry in cleanedUpList)
+            {
+                Console.WriteLine(entry);
+            }
 
             Console.ReadKey();
+        }
+
+        public static List<string> createAzubiList(int anzahl)
+        {
+            var azubiListe = new List<string>();
+            while (azubiListe.Count < anzahl)
+            {
+                Console.WriteLine("Bitte gib einen Namen ein");
+                azubiListe.Add(Console.ReadLine());
+            }
+
+            return azubiListe;
+        }
+
+        public static List<string> CleanList(List<string> allTrainees)
+        {
+            var cleanList = new List<string>();
+            foreach (var trainee in allTrainees)
+            {
+                if (trainee.ToLower().StartsWith("m"))
+                {
+                    cleanList.Add(trainee);
+                }
+            }
+
+            return cleanList;
         }
     }
 }

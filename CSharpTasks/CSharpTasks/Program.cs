@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using System.Threading;
 
 namespace CSharpTasks
 {
@@ -80,40 +81,49 @@ namespace CSharpTasks
             //cat1.PrintAnimalInfo();
             //pig1.PrintAnimalInfo();
 
-            var azubis = createAzubiList(5);
-            var cleanedUpList = CleanList(azubis);
-            foreach (var entry in cleanedUpList)
-            {
-                Console.WriteLine(entry);
-            }
+            //var azubis = createAzubiList(5);
+            //var cleanedUpList = CleanList(azubis);
+            //foreach (var entry in cleanedUpList)
+            //{
+            //    Console.WriteLine(entry);
+            //}
 
-            Console.ReadKey();
+            //Console.ReadKey();
+            var i = 1;
+            do
+            {
+                Console.Clear();
+                Console.WriteLine(i);
+                i++;
+                Thread.Sleep(1000);
+
+            } while (true);
         }
 
-        public static List<string> createAzubiList(int anzahl)
-        {
-            var azubiListe = new List<string>();
-            while (azubiListe.Count < anzahl)
-            {
-                Console.WriteLine("Bitte gib einen Namen ein");
-                azubiListe.Add(Console.ReadLine());
-            }
+        //public static List<string> createAzubiList(int anzahl)
+        //{
+        //    var azubiListe = new List<string>();
+        //    while (azubiListe.Count < anzahl)
+        //    {
+        //        Console.WriteLine("Bitte gib einen Namen ein");
+        //        azubiListe.Add(Console.ReadLine());
+        //    }
 
-            return azubiListe;
-        }
+        //    return azubiListe;
+        //}
 
-        public static List<string> CleanList(List<string> allTrainees)
-        {
-            var cleanList = new List<string>();
-            foreach (var trainee in allTrainees)
-            {
-                if (trainee.ToLower().StartsWith("m"))
-                {
-                    cleanList.Add(trainee);
-                }
-            }
+        //public static List<string> CleanList(List<string> allTrainees)
+        //{
+        //    var cleanList = new List<string>();
+        //    foreach (var trainee in allTrainees)
+        //    {
+        //        if (trainee.ToLower().StartsWith("m"))
+        //        {
+        //            cleanList.Add(trainee);
+        //        }
+        //    }
 
-            return cleanList;
-        }
+        //    return cleanList;
+        //}
     }
 }

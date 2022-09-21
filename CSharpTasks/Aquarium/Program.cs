@@ -9,30 +9,30 @@ namespace AquariumTask
             Console.WriteLine("wie hoch soll das aquiarium werden? (mindestens 20)");
             var height = Convert.ToInt32(Console.ReadLine());
 
-
             Console.WriteLine("wie breit soll das aquiarium werden? (mindestens 20)");
             var width = Convert.ToInt32(Console.ReadLine());
 
             var fishTank = new Aquarium(height, width);
 
-            var foo = new Fish("carp");
-            var bar = new Fish("swordfish");
-            var foobar = new Fish("blowfish");
-            var barfoo = new Fish("shark");
+            var carp = new Fish("carp");
+            var shark = new Fish("shark");
+            var swordfish = new Fish("swordfish");
+            var blowfish = new Fish("blowfish");
 
-            fishTank.AddFish(foo);
-            fishTank.AddFish(bar);
-            fishTank.AddFish(foobar);
-            fishTank.AddFish(barfoo);
+            fishTank.Fishes.Add(carp);
+            fishTank.Fishes.Add(shark);
+            fishTank.Fishes.Add(swordfish);
+            fishTank.Fishes.Add(blowfish);
 
-            foo.GiveFishInfo();
-            bar.GiveFishInfo();
-            foobar.GiveFishInfo();
-            barfoo.GiveFishInfo();
+            carp.GiveFishInfo();
+            shark.GiveFishInfo();
+            swordfish.GiveFishInfo();
+            blowfish.GiveFishInfo();
 
             fishTank.FillAquarium();
-            fishTank.ShowAquarium();
             Console.ReadKey();
         }
+
+        
     }
 }

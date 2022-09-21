@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading;
 
 namespace AquariumTask
 {
@@ -18,6 +19,7 @@ namespace AquariumTask
             this.AquariumArray = new string[this.Width, this.Height];
         }
 
+        //print out the aquarium array
         public void ShowAquarium()
         {
             for (int j = 0; j < this.Height; j++)
@@ -28,76 +30,92 @@ namespace AquariumTask
                 }
                 Console.Write("\n");
             }
-        }
 
-        public void AddFish(Fish fish)
-        {
-            this.Fishes.Add(fish);
         }
 
         public void FillAquarium()
         {
+            
+
+            //generate number for random fish position
             Random rnd = new Random((int)DateTime.Now.Ticks);
             foreach (var fish in this.Fishes)
             {
-                fish.FishHeight = rnd.Next(1, this.Height);
-                fish.FishPosition = rnd.Next(1, this.Width - 1); ;
-                Console.WriteLine(fish.Name + " height: " + fish.FishHeight);
-                Console.WriteLine(fish.Name + " position:  " + fish.FishPosition);
+                //only generate new X and Y coordinates when the fish doesnt have any
+                
+                    fish.FishX = rnd.Next(1, this.Height);
+                    fish.FishY = rnd.Next(1, this.Width - 1); ;
+                
+                Console.WriteLine(fish.Name + " height: " + fish.FishX);
+                Console.WriteLine(fish.Name + " position:  " + fish.FishY);
                 foreach (var fish1 in this.Fishes)
                 {
-                    if (fish1.FishPosition == fish.FishPosition)
+                    if (fish1.FishY == fish.FishY)
                     {
+                        //assign random fish positions 
                         do
                         {
-                            fish1.FishPosition = rnd.Next(1, this.Width - 1) - rnd.Next(2, 5);
-                        } while (fish1.FishPosition > this.Width - 1 || fish1.FishPosition < 0);
+                            fish1.FishY = rnd.Next(1, this.Width - 1) - rnd.Next(2, 5);
+                        } while (fish1.FishY > this.Width - 1 || fish1.FishY < 0);
                     }
                 }
             }
-
+            // check if positions are the same -> if so change them
             for (int i = 0; i < this.Fishes.Count - 1; i++)
             {
-                if (this.Fishes[i].FishPosition == this.Fishes[i + 1].FishPosition)
+                if (this.Fishes[i].FishY == this.Fishes[i + 1].FishY)
                 {
-                    this.Fishes[i].FishPosition = rnd.Next(1, this.Width - 1) - rnd.Next(2, 5);
+                    this.Fishes[i].FishY = rnd.Next(1, this.Width - 1) - rnd.Next(2, 5);
                 }
             }
-
-
-
-
-            for (int j = 0; j < this.Height; j++)
+            do
             {
-                for (int i = 0; i < this.Width; i++)
+                Console.Clear();
+                //fill the aquarium array with content 
+                for (int j = 0; j < this.Height; j++)
                 {
-                    if (i == 0 || i == this.Width - 1)
+                    for (int i = 0; i < this.Width; i++)
                     {
-                        this.AquariumArray[i, j] = "|";
-                    }
-                    else if (j == this.Height - 1)
-                    {
-                        this.AquariumArray[i, j] = "_";
-                    }
-                    else
-                    {
-                        this.AquariumArray[i, j] = " ";
-                    }
-                    foreach (var fish in this.Fishes)
-                    {
-                        if (fish.FishHeight == j)
+                        if (i == 0 || i == this.Width - 1)
                         {
-                            var counter = 0;
-                            var fishFormSplit = fish.Form.ToCharArray();
-                            foreach (var splitEntry in fishFormSplit)
+                            this.AquariumArray[i, j] = "|";
+                        }
+                        else if (j == this.Height - 1)
+                        {
+                            this.AquariumArray[i, j] = "_";
+                        }
+                        else
+                        {
+                            this.AquariumArray[i, j] = " ";
+                        }
+                        //iterate over fishes and put them in the array
+                        foreach (var fish in this.Fishes)
+                        {
+                            if (fish.FishX == j)
                             {
-                                this.AquariumArray[fish.FishPosition + counter, j] = splitEntry.ToString();
-                                counter++;
+                                // write the fish in the array (counter used to write the fish char for char
+                                var counter = 0;
+                                var fishFormSplit = fish.Form.ToCharArray();
+                                foreach (var splitEntry in fishFormSplit)
+                                {
+                                    this.AquariumArray[fish.FishY + counter, j] = splitEntry.ToString();
+                                    counter++;
+                                }
                             }
                         }
                     }
                 }
-            }
+                ShowAquarium();
+                foreach (var fish in this.Fishes)
+                {
+
+                    fish.FishY--;
+                }
+                Thread.Sleep(1000);
+
+            } while (true);
+
         }
     }
 }
+// TODO IMPLEMENT THAT FISHES TURN AROUND 

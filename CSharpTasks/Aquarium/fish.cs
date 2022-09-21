@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace AquariumTask
 {
@@ -6,10 +7,11 @@ namespace AquariumTask
     {
         public string Name;
         public string Form;
-        public double AendertTiefe;
+        public string ReverseForm;
+        public double ChangeDepth;
         public int Size;
-        public int FishHeight;
-        public int FishPosition;
+        public int FishX;
+        public int FishY;
 
         public Fish(string name)
         {
@@ -18,29 +20,41 @@ namespace AquariumTask
             {
                 case "carp":
                     this.Form = "<><";
+                    this.ReverseForm = "><>";
                     this.Size = 1;
-                    this.AendertTiefe = 0.5;
+                    this.ChangeDepth = 0.5;
+                    this.FishX = 0;
+                    this.FishY = 0;
                     return;
                 case "shark":
                     this.Form = "<///====><";
+                    this.ReverseForm = @"><====\\\>";
                     this.Size = 4;
-                    this.AendertTiefe = 0.25;
+                    this.ChangeDepth = 0.25;
+                    this.FishX = 0;
+                    this.FishY = 0;
                     return;
                 case "blowfish":
                     this.Form = "<()><";
+                    this.ReverseForm = "><()>";
                     this.Size = 3;
-                    this.AendertTiefe = 0.1;
+                    this.ChangeDepth = 0.1;
+                    this.FishX = 0;
+                    this.FishY = 0;
                     return;
                 case "swordfish":
                     this.Form = "-<><";
+                    this.ReverseForm = "><>-";
                     this.Size = 2;
-                    this.AendertTiefe = 0.2;
+                    this.ChangeDepth = 0.2;
+                    this.FishX = 0;
+                    this.FishY = 0;
                     return;
             }
         }
         public void GiveFishInfo()
         {
-            Console.WriteLine($"Dein Fisch heißt {this.Name} und hat diese Form: {this.Form}");
+            Console.WriteLine($"Dein Fisch heißt {this.Name} und hat diese Form: {this.Form} bzw ReverseForm: {this.ReverseForm}");
         }
     }
 }

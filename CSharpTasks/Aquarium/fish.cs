@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AquariumTask
 {
@@ -12,7 +8,8 @@ namespace AquariumTask
         public string Form;
         public double AendertTiefe;
         public int Size;
-
+        public int FishHeight;
+        public int FishPosition;
 
         public Fish(string name)
         {
@@ -31,23 +28,19 @@ namespace AquariumTask
                     return;
                 case "blowfish":
                     this.Form = "<()><";
-                    this.Size = 4;
+                    this.Size = 3;
                     this.AendertTiefe = 0.1;
                     return;
-                case "swordfish;":
+                case "swordfish":
                     this.Form = "-<><";
-                    this.Size = 4;
+                    this.Size = 2;
                     this.AendertTiefe = 0.2;
                     return;
             }
-
-            
         }
-
         public void GiveFishInfo()
         {
             Console.WriteLine($"Dein Fisch heißt {this.Name} und hat diese Form: {this.Form}");
         }
-
     }
 }
